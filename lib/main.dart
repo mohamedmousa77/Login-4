@@ -46,7 +46,10 @@ class MyApp extends StatelessWidget {
               children: [
                 Text(
                   'Sign in'.toUpperCase(),
-                  style: const TextStyle(color: Colors.white, fontSize: 25, fontWeight: FontWeight.w400),
+                  style: const TextStyle(
+                      color: Colors.white,
+                      fontSize: 25,
+                      fontWeight: FontWeight.w400),
                 )
               ],
             ),
@@ -131,17 +134,38 @@ class MyApp extends StatelessWidget {
                 children: [
                   Text(
                     'Forgotten password',
-                    style:  TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500),
                   ),
                   Text(
                     'Create new account',
-                    style:  TextStyle(color: Colors.white, fontSize: 12, fontWeight: FontWeight.w500),
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w500),
                   ),
                 ],
               ),
             ),
-
-
+            // Sign in button
+            const SizedBox(height: 150),
+            Container(
+              height: MediaQuery.of(context).size.height * 0.05,
+              width: MediaQuery.of(context).size.width * 0.8,
+              decoration: BoxDecoration(
+                color: Colors.black.withOpacity(0.5),
+                borderRadius: BorderRadius.circular(15),
+              ),
+              child: const Center(
+                child: Text(
+                  'Sign in',
+                  style: TextStyle(
+                      color: Colors.white, fontWeight: FontWeight.w500),
+                ),
+              ),
+            ),
           ],
         ));
   }
